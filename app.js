@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const indicatorsContainer = document.querySelector(".indicators");
   let index = 0;
 
-  // Create indicators
+
   for (let i = 0; i < totalImages; i++) {
     const dot = document.createElement("span");
     dot.className = "indicator-dot";
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".next").addEventListener("click", nextImage);
   document.querySelector(".prev").addEventListener("click", prevImage);
 
-  // Automatic slideshow
+
   let autoSlide = setInterval(nextImage, 3000);
 
   // Pause on hover
@@ -59,6 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
       () => (autoSlide = setInterval(nextImage, 3000))
     );
 
-  // Show the first image initially
   showImage(index);
 });
