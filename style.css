@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121111;
+}
+
+h1 {
+  text-align: center;
+  color: #734f1d;
+}
+
+.slider-wrapper {
+  padding: 12px;
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 0 0 5px #fff inset;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(185, 169, 222);
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 45px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* for user guide , directly go the image*/
+.indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.indicator-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator-dot.active {
+  background-color: #333;
+}
+
+@media (max-width: 600px) {
+  .nav-button {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
